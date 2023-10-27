@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)file:///D:/VS%20Code/Sample.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="./My webpage_files/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="./My webpage_files/Anna.jpg" alt="Your Image">
+        </div>
+        <div class="right">
+            <div class="info">
+                <p><b>NAME: S.JEYASRIDEVI</b></p>
+                <p><b>REG NO: 20213021506211</b></p>
+                <p><b>COLLEGE: ARIGNAR ANNA COLLEGE</b></p>
+            </div>
+        </div>
+    </div>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.PreventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if(targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>
